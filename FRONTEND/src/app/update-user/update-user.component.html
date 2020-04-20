@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div class="col-md-4 offset-4 card-body mt-5">
+        <form #form="ngForm" (ngSubmit)="updateUser(form)">
+            <div class="form-group">
+                <div class="card border-info">
+                    <img class="card-img-top" src="holder.js/100px180/" alt="">
+                    <div class="card-body">
+
+                        <label for="userId">Enter User Id to Update the Details Of Users</label>
+                        <input type="text" name="userId" id="userId" class="form-control" placeholder="Enter User Id "
+                            ngModel>
+                    </div>
+
+
+
+                    <button type="submit" class="btn btn-primary">Update</button>
+                </div>
+            </div>
+
+        </form>
+    </div> -->
+    <h5 style="text-align: center; color: red;">{{message}}</h5>
+    <form #form="ngForm" (ngSubmit)="updateUser(form)" class="container card mt-5 p-3">
+        <div class="form-group">
+            <label for="userId">ID</label>
+            <input type="number" class="form-control" id="userId" name="userId" placeholder="1234 " ngModel>
+          </div>
+          <small class="text-muted">Enter the valid id</small>
+          <br>
+          <hr>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="username">Email</label>
+            <input type="email" class="form-control" id="username" name="username" placeholder="Email" ngModel>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="userPassword">Password</label>
+            <input type="password" class="form-control" id="userPassword" name="userPassword" placeholder="Password" ngModel>
+          </div>
+        </div>
+     
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" name="name"  placeholder="xyz.." ngModel>
+        </div>
+
+         <div class="form-group">
+          <label for="role">Role</label>
+          <input type="text" class="form-control" id="role" name="role"  placeholder="ROLE_ADMIN.." ngModel>
+        </div>
+       
+        <button type="submit" class="btn btn-primary">Update</button>
+      </form>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" routerLink="/">Home</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li *ngIf="role === 'admin'" class="nav-item active">
+                    <a class="nav-link" routerLink="/home">Home </a>
+                </li>
+                <li *ngIf="role === 'ROLE_ADMIN'" class="nav-item">
+                    <a class="nav-link" routerLink="/add-book"><img
+                            src="https://img.icons8.com/material-rounded/24/000000/add.png" />Add-Book</a>
+                </li>
+                <li *ngIf="role === 'ROLE_ADMIN'" class="nav-item">
+                    <a class="nav-link" routerLink="/add-user"><img
+                            src="https://img.icons8.com/material-rounded/24/000000/add.png" />Add-User</a>
+                </li>
+
+                <li *ngIf="role === 'ROLE_ADMIN'" class="nav-item">
+                    <a class="nav-link" routerLink="/delete-book"><img
+                            src="https://img.icons8.com/material-rounded/20/000000/delete-forever.png" />Delete Book</a>
+                </li>
+                <li *ngIf="role === 'ROLE_ADMIN'" class="nav-item">
+                    <a class="nav-link" routerLink="/delete-user"><img
+                            src="https://img.icons8.com/material-rounded/20/000000/delete-forever.png" />Delete User</a>
+                </li>
+                <li *ngIf="role === 'ROLE_ADMIN'" class="nav-item">
+                    <a class="nav-link" routerLink="/show-book"><img
+                            src="https://img.icons8.com/material-outlined/24/000000/more.png" />Show Books</a>
+                </li>
+                <li *ngIf="role === 'ROLE_ADMIN'" class="nav-item">
+                    <a class="nav-link" routerLink="/show-user"><img
+                            src="https://img.icons8.com/material-outlined/24/000000/more.png" />Show Users</a>
+                </li>
+                <li *ngIf="role === 'ROLE_ADMIN'" class="nav-item">
+                    <a class="nav-link" routerLink="/update-user"><img
+                            src="https://img.icons8.com/windows/32/000000/approve-and-update.png" />Update Users</a>
+                </li>
+                <li *ngIf="role === 'ROLE_ADMIN'" class="nav-item">
+                    <a class="nav-link" routerLink="/show-all-user"><img
+                            src="https://img.icons8.com/windows/32/000000/approve-and-update.png" />Show All Users</a>
+                </li>
+                <!-- <li *ngIf="role === 'ROLE_USER'" class="nav-item">
+                    <a class="nav-link" routerLink="/getallBooks">List of Books</a>
+                </li> -->
+                <li *ngIf="role === 'ROLE_USER'" class="nav-item">
+                    <a class="nav-link" routerLink="/borrow">Borrow Books</a>
+                </li>
+                <li *ngIf="role === 'ROLE_ADMIN'" class="nav-item">
+                    <a class="nav-link" routerLink="/request-view"><img
+                        src="https://img.icons8.com/material-outlined/24/000000/more.png" />Book Request</a>
+                </li>
+                <li *ngIf="role === 'ROLE_USER'" class="nav-item">
+                    <a class="nav-link" routerLink="/search">Search Books</a>
+                </li>
+
+            </ul>
+
+
+
+
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+
+                <li *ngIf="!role" class="nav-item">
+                    <a class="nav-link" routerLink="/register">Register</a>
+                </li>
+                <li *ngIf="!role" class="nav-item">
+                    <a class="nav-link" routerLink="/forgot-password">Forgot Password</a>
+                </li>
+                <li *ngIf="!role" class=" nav-item">
+                    <a class="nav-link" routerLink="/login">Login</a>
+                </li>
+                <li *ngIf="role" class=" nav-item active">
+                    <a class="nav-link" (click)="logout()">Logout </a>
+                </li>
+
+
+            </ul>
+            <!--<form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>-->
+        </div>
+    </nav>
+</body>
+
+</html>

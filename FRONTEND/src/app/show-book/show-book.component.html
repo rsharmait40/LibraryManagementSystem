@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="col-md-4 offset-4 card-body mt-5">
+        <form #form="ngForm" (ngSubmit)="showBook(form)">
+            <div class="form-group">
+                <label for="bookId">Enter  Book Id to Show the Details Of Book</label>
+                <input type="text" name="bookId" id="bookId" class="form-control" placeholder="Enter Show Book Id " ngModel>
+            </div>
+            
+            
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+
+        </form>
+    </div>
+</body>
+</html>

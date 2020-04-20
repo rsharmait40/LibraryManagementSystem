@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="col-md-4 offset-4 card-body mt-5">
+        <form #form="ngForm" (ngSubmit)="listBook(form)">
+            <div class="card border-primary">
+                <img class="card-img-top" src="holder.js/100px180/" alt="">
+                <div class="card-body">
+
+
+
+                    <div class="form-group">
+                        <label for="bookId">Enter List Of Book Id</label>
+                        <input type="text" name="bookId" id="bookId" class="form-control"
+                            placeholder="Enter List Of Book Id " ngModel>
+                    </div>
+
+
+
+                    <button type="submit" class="btn btn-primary">List Book</button>
+
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

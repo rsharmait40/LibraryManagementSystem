@@ -1,0 +1,38 @@
+<div class="col-md-4 offset-4 card-body mt-5">
+    <h4>Add Books</h4>
+    <h5 style="text-align: center; color: red;">{{message}}</h5>
+    <form #form="ngForm" (ngSubmit)="addBook()">
+        <div class="card border-info">
+            <img class="card-img-top" src="holder.js/100px180/" alt="">
+            <div class="card-body">
+
+
+                <div class="form-group">
+                    <label for="bookName">Enter Book Name</label>
+                    <input type="text" name="bookName" id="bookName" class="form-control"
+                        placeholder="Enter Your BookName" ngModel>
+                </div>
+                <div class="form-group">
+                    <label for="bookAuthor">Enter Book Author</label>
+                    <input type="text" name="bookAuthor" id="bookAuthor" class="form-control"
+                        placeholder="Enter Your BookAuthor" ngModel>
+                </div>
+                <div class="form-group">
+                    <label for="noOfBooks">Enter Number of Books</label>
+                    <input type="text" name="noOfBooks" id="noOfBooks" class="form-control"
+                        placeholder="Enter the Number of Books" ngModel>
+                </div>
+                <div class="form-group">
+                    <label for="publisher">Enter Publisher</label>
+                    <input type="text" name="publisher" id="publisher" class="form-control"
+                        placeholder="Enter the Name of publisher" ngModel>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary">Add Book</button>
+
+            </div>
+        </div>
+        
+    </form>
+</div>

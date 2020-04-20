@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h5 style="text-align: center; color: red;">{{message}}</h5>
+    <div class="col-md-4 offset-4 card-body mt-5">
+        <form #form="ngForm" (ngSubmit)="deleteUser(form)">
+            <div class="form-group">
+                <label for="userId">Enter Delete User Id</label>
+                <input type="text" name="userId" id="userId" class="form-control" placeholder="Enter Delete User Id " ngModel>
+            </div>
+            
+            
+            
+            <button type="submit" class="btn btn-primary">Delete User</button>
+
+
+        </form>
+    </div>
+</body>
+</html>

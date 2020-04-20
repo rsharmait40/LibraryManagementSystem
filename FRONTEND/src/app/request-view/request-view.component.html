@@ -1,0 +1,4 @@
+<div *ngFor="let req of requests">
+    <button (onClick)="acceptRequest(req.userId)">Accept</button>
+    <button (onClick)="rejectRequest(req.userId)">Reject</button>
+</div>

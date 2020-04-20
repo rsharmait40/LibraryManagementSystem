@@ -1,0 +1,39 @@
+<h5 style="text-align: center; color: red;">{{message}}</h5>
+<div class="col-md-4 offset-4 card-body mt-5">
+    <h4>Add User</h4>
+    <form #form="ngForm" (ngSubmit)="addUser()">
+        <div class="card border-info">
+            <img class="card-img-top" src="holder.js/100px180/" alt="">
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="name">Enter userName</label>
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Enter Your Name"
+                        ngModel>
+                </div>
+                <div class="form-group">
+                    <label for="username">Enter UserEmail</label>
+                    <input type="email" name="username" id="username" class="form-control"
+                        placeholder="Enter Your Email" ngModel>
+                </div>
+                <div class="form-group">
+                    <label for="userPassword">Enter UserPassword</label>
+                    <input type="password" name="userPassword" id="userPassword" class="form-control"
+                        placeholder="Enter Your password" ngModel>
+                </div>
+
+                <div class="form-group">
+                    <label for="role">Enter Role</label>
+                    <select  class="form-control" name="role" id="role" ngModel="ROLE_ADMIN">
+                      <option value="ROLE_ADMIN">Admin</option>
+                      <option value="ROLE_USER">User</option>
+                      
+                    </select>
+                  </div>
+
+
+                <button type="submit" class="btn btn-primary">Add User</button>
+
+            </div>
+        </div>
+    </form>
+</div>
